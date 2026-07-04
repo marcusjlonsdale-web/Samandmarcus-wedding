@@ -1,7 +1,21 @@
-/* ======================================
-   Sam & Marcus Wedding Website
-   Luxury Rhodes Theme
-====================================== */
+/* =======================================================
+   Samantha & Marcus Wedding Website
+   Rhodes • Greece • 25 June 2027
+=======================================================*/
+
+:root{
+
+    --navy:#0F2945;
+    --gold:#C6A35D;
+    --cream:#F8F5EF;
+    --white:#ffffff;
+    --text:#555555;
+
+    --shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+/* ---------- RESET ---------- */
 
 *{
     margin:0;
@@ -9,72 +23,782 @@
     box-sizing:border-box;
 }
 
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 body{
-    font-family:'Cormorant Garamond', serif;
-    background:#F9F6EF;
-    overflow:hidden;
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
 }
 
-/* Background */
+/* ---------- NAVIGATION ---------- */
 
-.background{
+header{
+
     position:fixed;
-    inset:0;
-    background:linear-gradient(
-        180deg,
-        #f9f6ef 0%,
-        #f2ede4 100%
-    );
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
 }
 
-/* Intro */
-
-#intro{
-
-    width:100vw;
-
-    height:100vh;
+.navbar{
 
     display:flex;
 
-    flex-direction:column;
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 60px;
+
+    background:transparent;
+
+    backdrop-filter:none;
+
+    transition:all .35s ease;
+
+}
+
+
+.logo-main{
+
+    font-size:42px;
+
+    color:var(--navy);
+
+    font-weight:700;
+
+}
+
+.logo-sub{
+
+    font-size:11px;
+
+    color:var(--gold);
+
+    letter-spacing:5px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:38px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--navy);
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--gold);
+
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    background:url("../assets/images/hero.jpeg") center center/cover no-repeat;
+
+    display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    position:relative;
+    text-align:center;
 
 }
 
-/* Envelope */
+.hero-overlay{
 
-.envelope{
+    position:absolute;
 
-    width:320px;
+    inset:0;
 
-    height:220px;
+    background:
+    linear-gradient(
+        rgba(5,20,40,.25),
+        rgba(5,20,40,.55)
+    );
 
-    background:#fbf8f2;
+}
 
-    border-radius:6px;
+.hero-content{
 
     position:relative;
+
+    z-index:5;
+
+    color:white;
+
+    max-width:900px;
+
+    margin-top:80px;
+
+    padding:40px;
+
+}
+
+.family{
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:110px;
+
+    font-weight:400;
+
+    line-height:1;
+
+}
+
+.hero h1 span{
+
+    color:var(--gold);
+
+}
+
+.hero-text{
+
+    margin-top:30px;
+
+    font-size:28px;
+
+    line-height:1.6;
+
+}
+
+.hero-date{
+
+    margin-top:35px;
+
+    font-size:32px;
+
+    color:white;
+
+}
+
+.gold-button{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:18px 46px;
+
+    border-radius:60px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.gold-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* ---------- DETAILS ---------- */
+
+.details{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-top:-90px;
+
+    position:relative;
+
+    z-index:50;
+
+    background:white;
+
+    border-radius:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.detail-card{
+
+    text-align:center;
+
+    padding:55px 25px;
+
+    border-right:1px solid #ece7dc;
+
+}
+
+.detail-card:last-child{
+
+    border-right:none;
+
+}
+
+.detail-card h3{
+
+    font-size:36px;
+
+    color:var(--navy);
+
+    margin-bottom:12px;
+
+}
+
+.detail-card p{
+
+    font-size:24px;
+
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+.countdown{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    font-size:48px;
+
+    color:var(--navy);
+
+    margin-bottom:60px;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.box{
+
+    width:170px;
+
+}
+
+.box span{
+
+    display:block;
+
+    font-size:110px;
+
+    line-height:1;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    text-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+.box small{
+
+    display:block;
+
+    margin-top:18px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:18px;
+
+    color:var(--navy);
+
+}
+
+/* ==========================================================
+   TRAVEL
+========================================================== */
+
+#travel{
+
+    padding:120px 10%;
+
+    background:white;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:58px;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+
+    font-size:28px;
+
+    line-height:1.7;
+
+}
+
+.travel-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.travel-card{
+
+    background:var(--cream);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.travel-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.travel-card h3{
+
+    color:var(--navy);
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.travel-card p{
+
+    font-size:22px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   RSVP
+========================================================== */
+
+#rsvp{
+
+    background:linear-gradient(
+
+    rgba(15,41,69,.92),
+
+    rgba(15,41,69,.92)
+
+    ),
+
+    url("../assets/images/hero.jpeg") center/cover;
+
+    color:white;
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.rsvp-container{
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+.rsvp-container h2{
+
+    font-size:62px;
+
+    margin-bottom:25px;
+
+}
+
+.rsvp-container p{
+
+    font-size:28px;
+
+    margin-bottom:45px;
+
+}
+
+.rsvp-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.rsvp-form input,
+
+.rsvp-form select,
+
+.rsvp-form textarea{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:20px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.rsvp-form textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+.rsvp-form button{
+
+    padding:20px;
+
+    border:none;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    border-radius:50px;
+
+    font-size:22px;
 
     cursor:pointer;
 
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.15);
-
-    animation:float 5s ease-in-out infinite;
+    transition:.3s;
 
 }
 
-/* Envelope flap */
+.rsvp-form button:hover{
 
-.envelope::before{
+    transform:translateY(-4px);
 
-content:"";
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#0F2945;
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    font-size:24px;
+
+    opacity:.9;
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+#thanks{
+
+margin-top:40px;
+
+animation:fadeIn 1s ease;
+
+}
+
+#thanks h2{
+
+font-size:58px;
+
+margin-bottom:20px;
+
+color:white;
+
+}
+
+#thanks p{
+
+font-size:28px;
+
+line-height:1.7;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+section{
+
+    position:relative;
+
+}
+
+section::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:90px auto 0;
+
+    opacity:.35;
+
+}
+
+/* =========================
+   Venue
+========================= */
+
+.venue{
+
+    background:white;
+
+    text-align:center;
+
+    padding:120px 10%;
+
+}
+
+.venue-card{
+
+    margin:50px auto;
+
+    max-width:1100px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.venue-card iframe{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+}
+
+.venue-buttons{
+
+    margin-top:40px;
+
+}
+
+/*=========================
+Envelope
+=========================*/
+
+.envelope-page{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#f6f2ea;
+
+overflow:hidden;
+
+}
+
+.envelope-wrapper{
+
+text-align:center;
+
+}
+
+.envelope{
+
+width:340px;
+
+height:220px;
+
+background:white;
+
+position:relative;
+
+border-radius:8px;
+
+cursor:pointer;
+
+box-shadow:0 30px 80px rgba(0,0,0,.15);
+
+transition:1s;
+
+}
+
+.flap{
 
 position:absolute;
 
@@ -86,125 +810,126 @@ width:100%;
 
 height:100%;
 
-clip-path:polygon(0 0,50% 50%,100% 0);
+background:#efe8dc;
 
-background:#f2ede4;
+clip-path:polygon(0 0,50% 55%,100% 0);
+
+transform-origin:top;
+
+transition:1s;
 
 }
 
-/* Wax Seal */
-
 .seal{
-
-width:70px;
-
-height:70px;
-
-background:#C8A15A;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
 
 position:absolute;
 
 left:50%;
 
-top:48%;
+top:50%;
 
 transform:translate(-50%,-50%);
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:var(--gold);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 color:white;
 
 font-weight:bold;
 
-letter-spacing:2px;
-
-font-size:20px;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.25);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 
 }
 
-/* Text */
+.letter{
 
-h1{
+position:absolute;
 
-margin-top:60px;
+width:100%;
 
-font-size:52px;
-
-font-weight:400;
-
-color:#112F5C;
-
-}
-
-p{
-
-margin-top:12px;
-
-font-size:22px;
-
-color:#666;
-
-}
-
-/* Floating animation */
-
-@keyframes float{
-
-0%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-18px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:700px){
-
-.envelope{
-
-width:260px;
-
-height:180px;
-
-}
-
-h1{
-
-font-size:36px;
+top:65px;
 
 text-align:center;
 
-padding:0 20px;
+}
+
+.tap{
+
+margin-top:40px;
+
+font-size:24px;
+
+color:#777;
 
 }
 
-p{
+.travel{
 
-font-size:18px;
+    padding:120px 8%;
+
+    background:#faf7f2;
 
 }
+
+.travel-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.travel-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.travel-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.travel-card h3{
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+
+    font-size:34px;
+
+}
+
+.travel-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:20px;
 
 }
