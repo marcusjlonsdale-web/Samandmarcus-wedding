@@ -1,21 +1,30 @@
 const invite = document.getElementById("luxuryEnvelope");
 const button = document.getElementById("openInvite");
 
-button.addEventListener("click", () => {
+if (invite && button) {
 
-    button.style.pointerEvents = "none";
+    button.addEventListener("click", () => {
 
-    invite.style.transition = "all 1.8s ease";
+        button.style.pointerEvents = "none";
 
-    invite.style.transform = "scale(1.08)";
-    invite.style.filter = "blur(2px)";
-    invite.style.opacity = "0";
+        invite.style.transition = "all 1.8s cubic-bezier(.22,.61,.36,1)";
+        invite.style.transform = "scale(1.08) translateY(-20px)";
+        invite.style.opacity = "0";
+        invite.style.filter = "blur(2px)";
 
-    document.body.style.transition = "background 1.8s ease";
-    document.body.style.background = "#ffffff";
+        setTimeout(() => {
 
-    setTimeout(() => {
-        window.location.href = "home.html";
-    }, 1700);
+            document.body.style.transition = "opacity .8s ease";
+            document.body.style.opacity = "0";
 
-});
+        }, 900);
+
+        setTimeout(() => {
+
+            window.location.href = "home.html";
+
+        }, 1700);
+
+    });
+
+}

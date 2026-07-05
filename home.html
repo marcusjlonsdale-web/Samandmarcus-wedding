@@ -1,335 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samantha & Marcus | Rhodes 2027</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samantha & Marcus | Rhodes 2027</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/final.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
 </head>
 
 <body>
 
-<header>
+<main class="invitation">
 
-    <div class="navbar">
+    <!-- HERO -->
 
-        <div class="logo">
+  <section class="hero">
 
-            <div class="logo-main">S & M</div>
+    <div class="hero-overlay"></div>
 
-            <div class="logo-sub">
-                RHODES • 25 JUNE 2027
+    <div class="hero-container">
+
+        <div class="hero-left">
+
+            <p class="family">
+                Sun, Sea and a Lifetime together
+            </p>
+
+            <div class="gold-line"></div>
+
+            <h1>
+                Samantha
+                <span>&</span>
+                Marcus
+            </h1>
+
+            <p class="invite-text">
+                INVITE YOU TO CELEBRATE THEIR
+            </p>
+
+            <h2>
+                Wedding
+            </h2>
+
+        </div>
+
+        <div class="hero-right">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- INFORMATION PANEL -->
+
+  <section class="invitation-card">
+
+    <div class="details-grid">
+
+        <div class="detail">
+
+            <div class="detail-icon">
+                <span class="luxury-icon">✦</span>
+            </div>
+
+            <h3>Friday</h3>
+
+            <p>25 June 2027</p>
+
+        </div>
+
+        <div class="detail">
+
+            <div class="detail-icon">
+                <span class="luxury-icon">❦</span>
+            </div>
+
+            <h3>Ceremony</h3>
+
+            <p>6:00 PM</p>
+
+        </div>
+
+        <div class="detail">
+
+            <div class="detail-icon">
+                <span class="luxury-icon">❖</span>
+            </div>
+
+            <h3>Reception</h3>
+
+            <p>8:00 PM</p>
+
+        </div>
+
+        <div class="detail">
+
+            <div class="detail-icon">
+                <span class="luxury-icon">✧</span>
+            </div>
+
+            <h3>Venue</h3>
+
+            <p>Amfialos<br>Rhodes</p>
+
+        </div>
+
+    </div>
+
+</section>
+  
+    <!-- COUNTDOWN -->
+
+   <section class="countdown-wrapper">
+
+    <div class="countdown-card">
+
+        <h2>COUNTDOWN TO OUR WEDDING</h2>
+
+        <div class="gold-divider-center"></div>
+
+        <div class="countdown-grid">
+
+            <div class="count-item">
+
+                <span id="days">000</span>
+
+                <small>DAYS</small>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="count-item">
+
+                <span id="hours">00</span>
+
+                <small>HOURS</small>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="count-item">
+
+                <span id="minutes">00</span>
+
+                <small>MINUTES</small>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="count-item">
+
+                <span id="seconds">00</span>
+
+                <small>SECONDS</small>
+
             </div>
 
         </div>
 
-        <nav>
-
-            <a href="#hero">Welcome</a>
-
-            <a href="#details">Our Day</a>
-
-            <a href="#countdown">Countdown</a>
-
-            <a href="#travel">Travel</a>
-
-            <a href="#rsvp">RSVP</a>
-
-        </nav>
-
     </div>
 
-</header>
+    </section>
 
+    <!-- RSVP -->
 
-<section id="hero" class="hero">
+   <section class="rsvp-wrapper">
 
-    <div class="hero-overlay"></div>
+    <div class="rsvp-card">
 
-    <div class="hero-content">
+        <h2>RSVP</h2>
 
-        <p class="family">
+        <div class="gold-divider-center"></div>
 
-            Together with their families
+        <p class="rsvp-intro">
 
-        </p>
-
-        <h1>
-
-            Samantha
-
-            <span>&</span>
-
-            Marcus
-
-        </h1>
-
-        <p class="hero-text">
-
-            request the pleasure of your company
-
-            <br><br>
-
-            as they celebrate their wedding
-
-        </p>
-
-        <p class="hero-date">
-
-            Friday 25 June 2027
+            We would be honoured to celebrate our special day with you.
 
             <br>
 
-            Amfialos • Pefki • Rhodes
+            Kindly respond before
+
+            <strong>31st August 2026</strong>
 
         </p>
 
-        <a href="#details" class="gold-button">
+        <form id="rsvpForm">
 
-            Begin Your Journey
+            <div class="form-grid">
 
-        </a>
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Full Name"
+                    required>
 
-    </div>
+                <select
+                    id="attendance"
+                    required>
 
-</section>
+                    <option value="">
+                        Will you be attending?
+                    </option>
 
+                    <option value="Yes">
+                        Delighted to attend
+                    </option>
 
-<section id="details" class="details">
+                    <option value="No">
+                        Sadly unable to attend
+                    </option>
 
-    <div class="detail-card">
+                </select>
 
-        <h3>Friday</h3>
-
-        <p>25 June 2027</p>
-
-    </div>
-
-    <div class="detail-card">
-
-        <h3>Ceremony</h3>
-
-        <p>6:00 PM</p>
-
-    </div>
-
-    <div class="detail-card">
-
-        <h3>Celebration</h3>
-
-        <p>8:00 PM</p>
-
-    </div>
-
-    <div class="detail-card">
-
-        <h3>Venue</h3>
-
-        <p>Amfialos, Rhodes</p>
-
-    </div>
-
-</section>
-
-
-<section id="countdown" class="countdown">
-
-<h2>
-
-Countdown To Our Wedding
-
-</h2>
-
-<div class="timer">
-
-<div class="box">
-
-<span id="days">000</span>
-
-<small>Days</small>
-
-</div>
-
-<div class="box">
-
-<span id="hours">00</span>
-
-<small>Hours</small>
-
-</div>
-
-<div class="box">
-
-<span id="minutes">00</span>
-
-<small>Minutes</small>
-
-</div>
-
-<div class="box">
-
-<span id="seconds">00</span>
-
-<small>Seconds</small>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="venue" class="venue">
-
-    <h2 class="section-title">
-        Our Wedding Venue
-    </h2>
-
-    <p class="section-subtitle">
-        Amfialos, Pefki, Rhodes<br>
-        A beautiful setting overlooking the Aegean Sea.
-    </p>
-
-    <div class="venue-card">
-
-        <iframe
-            src="https://www.google.com/maps?q=Amfialos%20Pefki%20Rhodes&output=embed"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="venue-buttons">
-
-        <a target="_blank"
-           href="https://www.google.com/maps/search/?api=1&query=Amfialos+Pefki+Rhodes"
-           class="gold-button">
-
-            Open in Google Maps
-
-        </a>
-
-    </div>
-
-</section>
-
-<section id="travel" class="travel">
-
-    <h2 class="section-title">
-        Travel & Accommodation
-    </h2>
-
-    <p class="section-subtitle">
-        Rhodes is easy to reach from the UK, and we've gathered everything you'll need to plan your stay.
-    </p>
-
-    <div class="travel-grid">
-
-        <div class="travel-card">
-            <h3>✈ Flights</h3>
-            <p>
-                Direct flights are available from many UK airports including
-                Birmingham, East Midlands, Manchester and London.
-            </p>
-        </div>
-
-        <div class="travel-card">
-            <h3>🏨 Where to Stay</h3>
-            <p>
-                We recommend staying in Pefki or nearby Lindos for the best
-                beaches, restaurants and easy access to the venue.
-            </p>We shall Whatsapp you with a list of recommended hotels very soon!  
-        </div>
-
-        <div class="travel-card">
-            <h3>🚖 Transfers</h3>
-            <p>
-                Rhodes Airport is around one hour from Pefki.
-                Taxis and private transfers are available throughout the day however there is also cheap car hire at the airport that works out much cheaper than the taxis.
-            </p>
-        </div>
-
-        <div class="travel-card">
-            <h3>🌅 Things to Enjoy</h3>
-            <p>
-                Beautiful beaches, boat trips, Lindos Acropolis,
-                sunset cocktails and traditional Greek tavernas.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="rsvp">
-
-    <div class="rsvp-container">
-
-        <h2>Will You Join Us?</h2>
-
-        <p>Please let us know before <strong>1st August 2026</strong></p>
-
-        <form id="rsvpForm" class="rsvp-form">
+            </div>
 
             <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                required>
-
-            <select
-                id="attendance"
-                required>
-
-                <option value="">Will you be attending?</option>
-
-                <option value="Yes">Delighted to attend</option>
-
-                <option value="No">Sadly unable to attend</option>
-
-            </select>
-
-            <input
-                type="text"
                 id="dietary"
-                placeholder="Dietary requirements (optional)">
+                type="text"
+                placeholder="Dietary Requirements (optional)">
 
             <textarea
                 id="message"
                 placeholder="Leave us a message..."></textarea>
 
             <button type="submit">
-                Send RSVP
+
+                SEND RSVP
+
             </button>
 
         </form>
 
-        <div id="thanks" style="display:none;">
+        <div id="thanks">
 
-            <h2>Thank You ❤️</h2>
+            <h3>
+
+                Thank You
+
+            </h3>
 
             <p>
-                We've received your RSVP and can't wait to celebrate with you in Rhodes.
+
+                We can't wait to celebrate with you.
+
             </p>
 
         </div>
 
     </div>
 
-
 </section>
 
-<script src="js/script.js"></script>
+
+
+    <footer>
+
+        We can't wait to celebrate with you • Samantha & Marcus
+
+    </footer>
+
+</main>
+
 <script src="js/countdown.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
