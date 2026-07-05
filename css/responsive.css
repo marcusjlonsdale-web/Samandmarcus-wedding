@@ -1,325 +1,164 @@
 /* ==========================================
-   MOBILE
+   RESPONSIVE.CSS
+   Samantha & Marcus Wedding
 ========================================== */
 
-@media screen and (max-width:900px){
+@media (max-width:900px){
 
 html,
 body{
+
     overflow-x:hidden;
+
 }
 
-section{
-    padding:60px 20px;
+.invitation{
+
+    overflow:hidden;
+
 }
 
-/* HERO */
+/* ==========================
+   HERO
+========================== */
 
 .hero{
 
-    height:auto;
-    min-height:100vh;
-    padding:120px 0 70px;
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    background-position:68% center;
+    height:700px;
+
+    background-position:72% center;
+
     background-size:cover;
 
 }
 
-.hero::before{
+.hero-container{
 
-    background:rgba(0,0,0,.35);
-
-}
-
-.hero-content{
+    grid-template-columns:1fr;
 
     width:100%;
-    max-width:420px;
-    padding:0 25px;
+
+    padding:40px 25px;
+
+}
+
+.hero-left{
+
+    width:100%;
+
+    max-width:300px;
+
+    margin-top:25px;
+
+    margin-left:0;
+
+    padding:0;
+
     text-align:left;
-    z-index:2;
 
 }
 
-.hero-top{
+.family{
 
-    font-size:14px;
-    letter-spacing:7px;
-    line-height:1.8;
-    margin-bottom:20px;
+    font-size:12px;
+
+    letter-spacing:4px;
 
 }
 
-.hero-divider{
+.gold-line{
 
     width:120px;
-    margin:18px 0 25px;
+
+    margin:20px 0 30px;
 
 }
 
 .hero h1{
 
-    font-size:82px;
-    line-height:.82;
+    font-size:4rem;
+
+    line-height:.92;
 
 }
 
 .hero h2{
 
-    font-size:82px;
-    line-height:.82;
-    margin-top:-5px;
+    font-size:3.1rem;
 
 }
 
-.hero .ampersand{
+.invite-text{
 
-    font-size:70px;
-    margin:10px 0;
+    font-size:.9rem;
 
-}
+    margin-top:20px;
 
-.hero-text{
+    max-width:180px;
 
-    font-size:17px;
-    line-height:1.8;
-    margin-top:35px;
-    max-width:260px;
+    line-height:1.6;
 
 }
 
-.hero-date{
+/* ==========================
+   DETAILS
+========================== */
 
-    font-size:28px;
-    margin-top:35px;
+.invitation-card{
+
+    width:92%;
+
+    margin:-40px auto 30px;
 
 }
 
-.hero-location{
+.details-grid{
 
-    font-size:19px;
-
-}
-
-/* INFO PANEL */
-
-.info-panel{
-
-    display:grid;
     grid-template-columns:1fr;
-    gap:18px;
-
-    width:calc(100% - 30px);
-
-    margin:-40px auto 55px;
-
-    padding:22px;
-
-    border-radius:24px;
 
 }
 
-.info-card{
+.detail{
 
-    border:none;
-    border-bottom:1px solid rgba(0,0,0,.08);
-    padding:18px 0;
+    border-right:none;
+
+    border-bottom:1px solid #ece7df;
+
+    padding:30px 20px;
 
 }
 
-.info-card:last-child{
+.detail:last-child{
 
     border-bottom:none;
 
 }
 
-.info-icon{
-
-    font-size:34px;
-    margin-bottom:10px;
-
-}
-
-.info-card h3{
+.detail h3{
 
     font-size:28px;
 
 }
 
-.info-card p{
+.detail p{
 
-    font-size:17px;
-
-}
-
-/* COUNTDOWN */
-
-.countdown{
-
-    width:calc(100% - 30px);
-    margin:0 auto 50px;
-    padding:45px 20px;
-    border-radius:24px;
-
-}
-
-.countdown h2{
-
-    font-size:34px;
-    text-align:center;
-    margin-bottom:35px;
-
-}
-
-.countdown-grid{
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-    text-align:center;
-
-}
-
-.countdown-item{
-
-    border:none;
-
-}
-
-.countdown-number{
-
-    font-size:56px;
-
-}
-
-.countdown-label{
-
-    font-size:14px;
-    letter-spacing:3px;
-
-}
-
-
-/* RSVP */
-
-.rsvp{
-
-    width:calc(100% - 30px);
-    margin:0 auto 60px;
-    padding:40px 22px;
-    border-radius:24px;
-
-}
-
-.rsvp h2{
-
-    font-size:42px;
-
-}
-
-.rsvp p{
-
-    font-size:17px;
-
-}
-
-#rsvpForm{
-
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-
-}
-
-#rsvpForm input,
-#rsvpForm select,
-#rsvpForm textarea{
-
-    width:100%;
-    font-size:17px;
-    padding:18px;
-
-}
-
-#rsvpForm textarea{
-
-    min-height:140px;
-
-}
-
-#rsvpForm button{
-
-    width:100%;
-    padding:18px;
     font-size:18px;
 
 }
 
+/* ==========================
+   COUNTDOWN
+========================== */
 
-/* FOOTER */
+.countdown-wrapper{
 
-footer{
+    width:92%;
+
+}
+
+.countdown-card{
 
     padding:35px 20px;
-    text-align:center;
-
-}
-
-footer p{
-
-    font-size:16px;
-    line-height:1.7;
-
-}
-
-
-/* EXTRA SMALL PHONES */
-
-@media (max-width:480px){
-
-.hero{
-
-    padding-top:90px;
-
-}
-
-.hero h1{
-
-    font-size:62px;
-
-}
-
-.hero h2{
-
-    font-size:62px;
-
-}
-
-.hero .ampersand{
-
-    font-size:52px;
-
-}
-
-.hero-text{
-
-    font-size:15px;
-    max-width:220px;
-
-}
-
-.hero-date{
-
-    font-size:24px;
-
-}
-
-.hero-location{
-
-    font-size:17px;
 
 }
 
@@ -327,25 +166,75 @@ footer p{
 
     grid-template-columns:1fr 1fr;
 
-}
-
-.countdown-number{
-
-    font-size:46px;
+    gap:30px;
 
 }
 
-.info-card h3{
+.divider{
 
-    font-size:24px;
+    display:none;
+
+}
+
+.count-item span{
+
+    font-size:3.2rem;
 
 }
 
-.rsvp h2{
+.count-item small{
 
-    font-size:36px;
+    font-size:13px;
 
 }
+
+/* ==========================
+   RSVP
+========================== */
+
+.rsvp-wrapper{
+
+    width:92%;
+
+}
+
+.rsvp-card{
+
+    padding:35px 20px;
+
+}
+
+.form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.rsvp-card h2{
+
+    font-size:2.4rem;
+
+}
+
+.rsvp-intro{
+
+    font-size:1.1rem;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    padding:25px;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    text-align:center;
 
 }
 
