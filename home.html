@@ -75,7 +75,7 @@
 </section>
 
 
-    <!-- INFORMATION PANEL -->
+    <!-- INVITATION PANEL -->
 
   <section class="invitation-card">
 
@@ -211,35 +211,17 @@
 
         </p>
 
-   <form
-id="rsvpForm"
-name="Wedding RSVP"
-method="POST"
-action="/thank-you/"
-data-netlify="true"
-netlify>
-
-    <input type="hidden" name="form-name" value="Wedding RSVP">
-
-<p hidden>
-    <label>
-        Don't fill this in:
-        <input name="bot-field">
-    </label>
-</p>
-
+ 
             <div class="form-grid">
 
                 <input
                     id="name"
-                    name="name"
                     type="text"
                     placeholder="Full Name"
                     required>
 
                 <select
 id="attendance"
-name="attending"
                     required>
 
                     <option value="">
@@ -260,13 +242,11 @@ name="attending"
 
             <input
                 id="dietary"
-                name="dietary"
                 type="text"
                 placeholder="Dietary Requirements (optional)">
 
             <textarea
                 id="message"
-                name="message"
                 placeholder="Leave us a message..."></textarea>
 
             <button type="submit">
