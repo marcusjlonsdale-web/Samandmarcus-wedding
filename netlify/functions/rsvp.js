@@ -1,3 +1,5 @@
+const { google } = require("googleapis");
+
 exports.handler = async (event) => {
 
   if (event.httpMethod !== "POST") {
@@ -7,18 +9,61 @@ exports.handler = async (event) => {
     };
   }
 
-  const data = JSON.parse(event.body);
+  try {
 
-  console.log("RSVP RECEIVED:", data);
+    const data = JSON.parse(event.body);
 
-  return {
-    statusCode: 200,
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      success: true
-    })
-  };
+    const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
+
+    const auth = new google.auth.GoogleAuth({
+      credentials,
+      scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+    });
+
+    const sheets = google.sheets({
+      version: "v4",
+      auth
+    });
+
+    await sheets.spreadsheets.values.append({
+
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+
+      range: "Sheet1!A:E",
+
+      valueInputOption: "USER_ENTERED",
+
+      requestBody: {
+        values: [[
+          data.name,
+          data.attending,
+          data.dietary,
+          data.message,
+          new Date().toLocaleString("en-GB")
+        ]]
+      }
+
+    });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true
+      })
+    };
+
+  } catch (err) {
+
+    console.error(err);
+
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        success: false,
+        error: err.message
+      })
+    };
+
+  }
 
 };
