@@ -1,3 +1,7 @@
+// ==============================
+// Wedding RSVP
+// ==============================
+
 const form = document.getElementById("rsvpForm");
 
 if (form) {
@@ -20,23 +24,31 @@ if (form) {
                 {
                     method: "POST",
                     headers: {
-                        "Content-Type": "text/plain;charset=utf-8"
+                        "Content-Type": "text/plain;charset=UTF-8"
                     },
                     body: JSON.stringify(data)
                 }
             );
 
-            if (!response.ok) {
-                throw new Error(await response.text());
-            }
+            const result = await response.json();
 
-            form.reset();
-            document.getElementById("thanks").style.display = "block";
+            if (result.success) {
+
+                form.reset();
+
+                document.getElementById("thanks").style.display = "block";
+
+            } else {
+
+                alert("Sorry, something went wrong.");
+
+            }
 
         } catch (err) {
 
             console.error(err);
-            alert("Unable to send RSVP.");
+
+            alert("Unable to send RSVP. Please check your connection.");
 
         }
 
