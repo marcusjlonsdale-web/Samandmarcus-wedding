@@ -99,9 +99,9 @@
                 <span class="luxury-icon">❦</span>
             </div>
 
-            <h3>Ceremony</h3>
+            <h3>Ceremony starts at</h3>
 
-            <p>6:00 PM</p>
+            <p>6:00 PM - Guests arrive at 5:00 PM</p>
 
         </div>
 
@@ -211,12 +211,13 @@
 
         </p>
 
-    <form
-    id="rsvpForm"
-    name="Wedding RSVP"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field">
+   <form
+id="rsvpForm"
+name="Wedding RSVP"
+method="POST"
+action="/thank-you/"
+data-netlify="true"
+netlify>
 
     <input type="hidden" name="form-name" value="Wedding RSVP">
 
@@ -231,14 +232,14 @@
 
                 <input
                     id="name"
-                    name="Guest"
+                    name="name"
                     type="text"
                     placeholder="Full Name"
                     required>
 
                 <select
 id="attendance"
-name="Attending"
+name="attending"
                     required>
 
                     <option value="">
@@ -259,13 +260,13 @@ name="Attending"
 
             <input
                 id="dietary"
-                name="Dietary"
+                name="dietary"
                 type="text"
                 placeholder="Dietary Requirements (optional)">
 
             <textarea
                 id="message"
-                name="Message"
+                name="message"
                 placeholder="Leave us a message..."></textarea>
 
             <button type="submit">
