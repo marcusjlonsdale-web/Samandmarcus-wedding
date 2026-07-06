@@ -5,7 +5,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samantha & Marcus | Rhodes 2027</title>
+<meta name="description" content="Join Samantha & Marcus as they celebrate their wedding in Rhodes on 25 June 2027. View the invitation and RSVP online.">
 
+<meta property="og:type" content="website">
+<meta property="og:title" content="Samantha & Marcus | Wedding Invitation">
+<meta property="og:description" content="Join us in Rhodes on 25 June 2027">
+<meta property="og:url" content="https://samandmarcus.co.uk">
+<meta property="og:image" content="https://samandmarcus.co.uk/assets/images/hero.jpeg">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Samantha & Marcus | Wedding Invitation">
+<meta name="twitter:description" content="Join us in Rhodes on 25 June 2027">
+<meta name="twitter:image" content="https://samandmarcus.co.uk/assets/images/hero.jpeg">
 <link rel="stylesheet" href="css/final.css">
 <link rel="stylesheet" href="css/responsive.css">
 
@@ -197,18 +211,34 @@
 
         </p>
 
-        <form id="rsvpForm">
+    <form
+    id="rsvpForm"
+    name="Wedding RSVP"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field">
+
+    <input type="hidden" name="form-name" value="Wedding RSVP">
+
+<p hidden>
+    <label>
+        Don't fill this in:
+        <input name="bot-field">
+    </label>
+</p>
 
             <div class="form-grid">
 
                 <input
                     id="name"
+                    name="Guest"
                     type="text"
                     placeholder="Full Name"
                     required>
 
                 <select
-                    id="attendance"
+id="attendance"
+name="Attending"
                     required>
 
                     <option value="">
@@ -229,11 +259,13 @@
 
             <input
                 id="dietary"
+                name="Dietary"
                 type="text"
                 placeholder="Dietary Requirements (optional)">
 
             <textarea
                 id="message"
+                name="Message"
                 placeholder="Leave us a message..."></textarea>
 
             <button type="submit">
