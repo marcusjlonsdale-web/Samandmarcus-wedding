@@ -19,9 +19,7 @@ if (form) {
 
         try {
 
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby3cgcd5nceASW8mqOfFZ0VG8d9bcLXxtOpwZeT32YTByBMS7xP1EFm31CFw8oKLKKeUQ/exec",
-                {
+           const response = await fetch("/.netlify/functions/rsvp", {
                     method: "POST",
                     headers: {
                         "Content-Type": "text/plain;charset=UTF-8"
